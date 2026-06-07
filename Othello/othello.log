@@ -1,0 +1,60 @@
+2025-12-14 22:58:51,496 [WARNING]:  * Debugger is active!
+2025-12-14 22:58:51,506 [INFO]:  * Debugger PIN: 369-868-574
+2025-12-14 22:59:20,792 [INFO]:  * Detected change in '/Users/chiyevo/Desktop/Coursework/P 2/logger.py', reloading
+2025-12-14 22:59:20,977 [WARNING]:  * Debugger is active!
+2025-12-14 22:59:20,984 [INFO]:  * Debugger PIN: 369-868-574
+2025-12-14 22:59:25,031 [INFO]:  * Detected change in '/Users/chiyevo/Desktop/Coursework/P 2/logger.py', reloading
+2025-12-14 22:59:25,169 [WARNING]:  * Debugger is active!
+2025-12-14 22:59:25,176 [INFO]:  * Debugger PIN: 369-868-574
+2025-12-14 22:59:56,457 [INFO]:  * Detected change in '/Users/chiyevo/Desktop/Coursework/P 2/flask_game_engine.py', reloading
+2025-12-14 23:12:51,792 [ERROR]: Dark attempted illegal move at (2,4) via web interface
+2025-12-14 23:12:51,793 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:12:51] "[31m[1mPOST /make_move HTTP/1.1[0m" 400 -
+2025-12-14 23:12:52,416 [ERROR]: Dark attempted illegal move at (2,4) via web interface
+2025-12-14 23:12:52,417 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:12:52] "[31m[1mPOST /make_move HTTP/1.1[0m" 400 -
+2025-12-14 23:12:53,834 [ERROR]: Dark attempted illegal move at (3,5) via web interface
+2025-12-14 23:12:53,834 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:12:53] "[31m[1mPOST /make_move HTTP/1.1[0m" 400 -
+2025-12-14 23:12:54,526 [ERROR]: Dark attempted illegal move at (3,4) via web interface
+2025-12-14 23:12:54,526 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:12:54] "[31m[1mPOST /make_move HTTP/1.1[0m" 400 -
+2025-12-14 23:12:54,918 [ERROR]: Dark attempted illegal move at (2,4) via web interface
+2025-12-14 23:12:54,919 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:12:54] "[31m[1mPOST /make_move HTTP/1.1[0m" 400 -
+2025-12-14 23:12:55,088 [ERROR]: Dark attempted illegal move at (2,4) via web interface
+2025-12-14 23:12:55,088 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:12:55] "[31m[1mPOST /make_move HTTP/1.1[0m" 400 -
+2025-12-14 23:12:55,442 [ERROR]: Dark attempted illegal move at (2,4) via web interface
+2025-12-14 23:12:55,442 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:12:55] "[31m[1mPOST /make_move HTTP/1.1[0m" 400 -
+2025-12-14 23:12:56,143 [INFO]: Dark placed a piece at (5,4) via web interface
+2025-12-14 23:12:56,144 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:12:56] "POST /make_move HTTP/1.1" 200 -
+2025-12-14 23:12:59,275 [INFO]: Dark placed a piece at (2,4) via web interface
+2025-12-14 23:12:59,277 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:12:59] "POST /make_move HTTP/1.1" 200 -
+2025-12-14 23:13:00,768 [INFO]: Dark placed a piece at (5,2) via web interface
+2025-12-14 23:13:00,769 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:13:00] "POST /make_move HTTP/1.1" 200 -
+2025-12-14 23:13:02,034 [INFO]: Dark placed a piece at (2,5) via web interface
+2025-12-14 23:13:02,035 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:13:02] "POST /make_move HTTP/1.1" 200 -
+2025-12-14 23:13:02,983 [INFO]: Dark placed a piece at (2,3) via web interface
+2025-12-14 23:13:02,984 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:13:02] "POST /make_move HTTP/1.1" 200 -
+2025-12-14 23:13:04,174 [INFO]: Dark placed a piece at (0,4) via web interface
+2025-12-14 23:13:04,175 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:13:04] "POST /make_move HTTP/1.1" 200 -
+2025-12-14 23:13:04,749 [ERROR]: Dark attempted illegal move at (0,3) via web interface
+2025-12-14 23:13:04,749 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:13:04] "[31m[1mPOST /make_move HTTP/1.1[0m" 400 -
+2025-12-14 23:13:06,012 [ERROR]: Dark attempted illegal move at (6,2) via web interface
+2025-12-14 23:13:06,012 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:13:06] "[31m[1mPOST /make_move HTTP/1.1[0m" 400 -
+2025-12-14 23:13:06,668 [ERROR]: Dark attempted illegal move at (7,3) via web interface
+2025-12-14 23:13:06,668 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:13:06] "[31m[1mPOST /make_move HTTP/1.1[0m" 400 -
+2025-12-14 23:13:07,546 [ERROR]: Dark attempted illegal move at (0,3) via web interface
+2025-12-14 23:13:07,546 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:13:07] "[31m[1mPOST /make_move HTTP/1.1[0m" 400 -
+2025-12-14 23:13:08,288 [INFO]: Dark placed a piece at (1,2) via web interface
+2025-12-14 23:13:08,289 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:13:08] "POST /make_move HTTP/1.1" 200 -
+2025-12-14 23:13:09,642 [INFO]: Dark placed a piece at (0,1) via web interface
+2025-12-14 23:13:09,643 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:13:09] "POST /make_move HTTP/1.1" 200 -
+2025-12-14 23:13:10,936 [ERROR]: Dark attempted illegal move at (0,0) via web interface
+2025-12-14 23:13:10,936 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:13:10] "[31m[1mPOST /make_move HTTP/1.1[0m" 400 -
+2025-12-14 23:13:11,576 [INFO]: Dark placed a piece at (1,0) via web interface
+2025-12-14 23:13:11,577 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:13:11] "POST /make_move HTTP/1.1" 200 -
+2025-12-14 23:14:36,980 [ERROR]: Dark attempted illegal move at (2,4) via web interface
+2025-12-14 23:14:36,982 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:14:36] "[31m[1mPOST /make_move HTTP/1.1[0m" 400 -
+2025-12-14 23:14:38,596 [ERROR]: Dark attempted illegal move at (2,4) via web interface
+2025-12-14 23:14:38,597 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:14:38] "[31m[1mPOST /make_move HTTP/1.1[0m" 400 -
+2025-12-14 23:14:38,849 [ERROR]: Dark attempted illegal move at (2,4) via web interface
+2025-12-14 23:14:38,849 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:14:38] "[31m[1mPOST /make_move HTTP/1.1[0m" 400 -
+2025-12-14 23:14:40,072 [INFO]: Dark placed a piece at (2,3) via web interface
+2025-12-14 23:14:40,074 [INFO]: 127.0.0.1 - - [14/Dec/2025 23:14:40] "POST /make_move HTTP/1.1" 200 -
+2025-12-14 23:18:29,306 [INFO]:  * Detected change in '/Users/chiyevo/Desktop/Coursework/P 2/components.py', reloading

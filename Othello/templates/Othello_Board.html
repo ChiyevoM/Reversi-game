@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Othello/Reversi Game</title>
+    <style>
+        body { 
+            background: #222; 
+            font-family: Arial; 
+            color: #eee; 
+            text-align: center; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 { color: #76c7ff; margin-top: 20px; }
+
+        #board { 
+            display: grid; 
+            grid-template-columns: repeat(8, 60px); 
+            gap: 4px; 
+            margin: 20px auto; /* center the board */
+        }
+
+        .cell { 
+            width: 60px; 
+            height: 60px; 
+            background: #147a3b; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            cursor: pointer; 
+        }
+
+        .piece-dark { 
+            width: 45px; 
+            height: 45px; 
+            background: #0A2342; /* Deep navy */
+            border-radius: 50%; 
+        }
+
+        .piece-light { 
+            width: 45px; 
+            height: 45px; 
+            background: #F2E5C4; /* Warm sand */
+            border-radius: 50%; 
+        }
+
+        #status { font-size: 20px; margin-top: 10px; height: 24px; }
+        #error { color: #ff4d4d; height: 20px; margin-top: 10px; }
+        button { margin: 5px; padding: 5px 10px; font-size: 16px; }
+    </style>
+</head>
+<body>
+
+<h1>Othello/Reversi</h1>
+
+<div id="status">Welcome! Dark goes first.</div>
+<div id="error"></div>
+
+<button onclick="saveGame()">Save Game</button>
+<button onclick="loadGame()">Load Game</button>
+
+<div id="board"></div>
+
+<script>
+let firstLoad = true;
+
+async function loadBoard() {
+    const res = await fetch("/get_board");
+    const data = await res.json();
+    renderBoard(data.board, data.current_player, firstLoad);
+    firstLoad = false;
+}
+
+function renderBoard(board, currentPlayer, showStart=false) {
+    const boardDiv = document.getElementById("board");
+    boardDiv.innerHTML = "";
+
+    // Game over check
+    const flatBoard = board.flat();
+    const darkCount = flatBoard.filter(cell => cell === "Dark").length;
+    const lightCount = flatBoard.filter(cell => cell === "Light").length;
+    const totalPieces = darkCount + lightCount;
+
+    if (totalPieces === 64 || darkCount === 0 || lightCount === 0) {
+        let winnerMessage = "";
+        if (darkCount > lightCount) winnerMessage = "Dark wins!";
+        else if (lightCount > darkCount) winnerMessage = "Light wins!";
+        else winnerMessage = "It's a tie!";
+        document.getElementById("status").innerText = `Game Over! ${winnerMessage} (Dark: ${darkCount}, Light: ${lightCount})`;
+        return;
+    }
+
+    // Show start message if first load
+    if (showStart) {
+        document.getElementById("status").innerText = "Welcome! Dark goes first.";
+    } else {
+        document.getElementById("status").innerText = currentPlayer + "'s turn";
+    }
+
+    // Render board cells
+    board.forEach((row, r) => {
+        row.forEach((cell, c) => {
+            const div = document.createElement("div");
+            div.classList.add("cell");
+
+            if (cell === "Dark") {
+                const piece = document.createElement("div");
+                piece.classList.add("piece-dark");
+                div.appendChild(piece);
+            }
+            if (cell === "Light") {
+                const piece = document.createElement("div");
+                piece.classList.add("piece-light");
+                div.appendChild(piece);
+            }
+
+            div.onclick = () => makeMove(r, c);
+            boardDiv.appendChild(div);
+        });
+    });
+}
+
+async function makeMove(row, col) {
+    document.getElementById("error").innerText = "";
+    const res = await fetch("/make_move", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({row, col})
+    });
+
+    if (!res.ok) {
+        const data = await res.json();
+        document.getElementById("error").innerText = data.error;
+        return;
+    }
+
+    const data = await res.json();
+    renderBoard(data.board, data.next_player);
+}
+
+async function saveGame() {
+    await fetch("/save", { method: "POST" });
+    alert("Game saved!");
+}
+
+async function loadGame() {
+    const res = await fetch("/load");
+    if (!res.ok) {
+        alert("No saved game found.");
+        return;
+    }
+    const data = await res.json();
+    renderBoard(data.board, data.current_player);
+}
+
+loadBoard();
+</script>
+
+</body>
+</html>
